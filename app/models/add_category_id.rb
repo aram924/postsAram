@@ -1,0 +1,2 @@
+class AddCategoryId < ApplicationRecord
+end

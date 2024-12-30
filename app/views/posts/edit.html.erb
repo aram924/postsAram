@@ -1,0 +1,38 @@
+<style>body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    margin: 0;
+}</style>
+<div class="model new post-container" >
+  <h2>Edit Post</h2>
+  <%= link_to('Back to List', posts_path, class: 'back-link') %>
+  <%= form_for(@post) do |f| %>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <td><%=f.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Body</th>
+        <td><%=f.text_area(:body) %></td>
+      </tr>
+      <tr>
+        <th>liked</th>
+        <td><%=f.check_box(:liked) %></td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td><%=f.collection_select(:category_id,Category.all,:id,:name,prompt:"select a category") %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Edit Post") %>
+    </div>
+
+  <% end %>
+</div>

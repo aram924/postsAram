@@ -1,0 +1,23 @@
+<style>body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    margin: 0;
+}</style>
+<div class="model new post-container" >
+  <h2>Delete Post</h2>
+  <%= link_to('Back to List', posts_path, class: 'back-link') %>
+  <%= form_for(@post, method: 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this post?</p>
+    <p>Title: <%= @post.title %></p>
+    <p>Body: <%= @post.body %></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Post", class: 'action delete') %>
+    </div>
+
+  <% end %>
+</div>

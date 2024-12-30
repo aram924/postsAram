@@ -1,0 +1,45 @@
+
+
+<style>body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eeeeee;
+    margin: 0;
+}</style>
+<div class="model new post-container" >
+  <h2>Show post</h2>
+  <%= link_to('Back to List', posts_path, class: 'back-link') %>
+  <div class="actions">
+    <%= link_to('Edit', edit_post_path(@post), class: 'action edit') %>
+    <%= link_to('Delete', delete_post_path(@post), class:'action delete') %>
+  </div>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>Body</th>
+      <td><%= @post.body %></td>
+    </tr>
+    <tr>
+      <th>Liked</th>
+      <td><%= @post.liked? ? 'Yes' : 'No' %></td>
+    </tr>
+    <tr>
+      <th>Category</th>
+      <td><%= @post.category&.name || '-' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @post.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @post.updated_at %></td>
+    </tr>
+  </table>
+</div>
