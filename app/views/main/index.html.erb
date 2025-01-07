@@ -34,10 +34,10 @@
       <div class="col-md-4 d-flex">
         <div class="social-media">
           <p class="mb-0 d-flex">
-            <a href="https://github.com/aram924" class="d-flex align-items-center justify-content-center"><span class="fa fa-github"><i class="sr-only">Facebook</i></span></a>
-            <a href="https://aram924.github.io/Aram/" class="d-flex align-items-center justify-content-center"><span class="fa fa-globe"><i class="sr-only">Twitter</i></span></a>
-            <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-rss-square"><i class="sr-only">Instagram</i></span></a>
-            <a href="https://t.me/AramHamasaed" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane"><i class="sr-only">Dribbble</i></span></a>
+            <a href="https://github.com/aram924" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-github"><i class="sr-only">Facebook</i></span></a>
+            <a href="https://aram924.github.io/Aram/" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-globe"><i class="sr-only">Twitter</i></span></a>
+            <a href="#" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-rss-square"><i class="sr-only">Instagram</i></span></a>
+            <a href="https://t.me/AramHamasaed" target="_blank" class="d-flex align-items-center justify-content-center"><span class="fa fa-paper-plane"><i class="sr-only">Dribbble</i></span></a>
           </p>
         </div>
       </div>
@@ -45,14 +45,16 @@
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container-fluid">
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars"></span> Menu
       </button>
+
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav m-auto">
-          <li class="nav-item"> <%= link_to 'Manage your posts', posts_path, class: 'nav-link' %></li>
-          <li class="nav-item"><%= link_to 'Manage your categories', categories_path,  class: 'nav-link'%></li>
-          <li class="nav-item"> <%= link_to 'Contact', about_path, class: 'nav-link'%></li>
+          <li class="nav-item"> <%= link_to 'Posts Management', posts_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Categories Management', categories_path,  class: 'nav-link'%></li>
+          <li class="nav-item"> <%= link_to 'About', about_path, class: 'nav-link'%></li>
         </ul>
       </div>
     </div>
